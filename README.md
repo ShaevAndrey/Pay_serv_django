@@ -18,7 +18,7 @@ gunicorn test_task.wsgi:application --bind 0.0.0.0:8000
 docker build -t web .
 
 2. Запускаем контейнер:
-docker run -d -p 8000:8000 web
+docker run -d -e "PORT=8000" -p 8000:8000 web
 
 Адрес веб-сервера:
 
